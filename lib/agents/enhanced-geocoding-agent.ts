@@ -170,7 +170,8 @@ export class EnhancedGeocodingAgent {
           );
 
           const results = fuse.search(placeName);
-          return results.slice(0, 3).map((r) => r.item.split(',')[0]);
+          return results.slice(0, 3).map((r) => String(r.item).split(',')[0]);
+
         }
       }
     } catch (error) {

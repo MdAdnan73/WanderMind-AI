@@ -308,12 +308,6 @@ export const POPULAR_CITIES: Record<string, CityAlias> = {
     country: 'Vietnam',
     coordinates: { lat: 10.8231, lon: 106.6297 },
   },
-  'bangkok': {
-    name: 'Bangkok',
-    aliases: ['Bangkok'],
-    country: 'Thailand',
-    coordinates: { lat: 13.7563, lon: 100.5018 },
-  },
   'mexico city': {
     name: 'Mexico City',
     aliases: ['Mexico City', 'Ciudad de México'],

@@ -250,7 +250,8 @@ Return ONLY the JSON, no other text.`;
     // Pattern 2: "in/at/to [Place]"
     if (!placeName) {
       const pattern2 = /(?:in|at|to|near|around)\s+([a-zA-Z\s]+?)(?:\s|,|\.|$|\?|what|where)/i;
-      match = normalized.match(pattern2);
+      let match = normalized.match(pattern2);
+
       if (match && match[1]) {
         placeName = match[1].trim().replace(/[.,!?]/g, '').replace(/\s+/g, ' ');
       }
@@ -259,7 +260,7 @@ Return ONLY the JSON, no other text.`;
     // Pattern 3: "[Place] weather/temperature/places"
     if (!placeName) {
       const pattern3 = /([a-zA-Z\s]+?)\s+(?:weather|temperature|temp|places|attractions)/i;
-      match = normalized.match(pattern3);
+      let match = normalized.match(pattern3);
       if (match && match[1]) {
         placeName = match[1].trim().replace(/[.,!?]/g, '').replace(/\s+/g, ' ');
       }
